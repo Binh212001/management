@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http:www.ultraq.net.nz/thymeleaf/layout"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/fontawesome-free-6.5.1-web/css/all.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div>
+    <header th:replace="layout/Header.html :: header">
+    </header>
+</div>
+
+<div>
+    <section layout:fragment="content_main"  >
+    <p class="text-danger">Your page content goes here</p>
+</section>
+</div>
+</body>
+</body>
+
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+</html>

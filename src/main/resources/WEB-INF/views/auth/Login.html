@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <link rel="stylesheet" th:href="@{/css/fontawesome-free-6.5.1-web/css/all.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+
+<div class="d-flex flex-column " style="height: 100vh">
+    <form class="m-auto p-2 shadow radius-5" th:action="@{/auth/login/login}" style="width: 350px" th:object="${employee}">
+        <div class="text-center my-3  bg-logo"  >
+            <img th:src="@{/image/logo.png}"  style="height: 40px;" class="text-center" alt="" srcset="">
+        </div>
+        <div class="text-center p-3 mb-3 radius-5" style="background-color: #d1ecf1 ; color: #0e616e">
+            Access and manage your instances from this Odoo account.
+        </div>
+        <div class="mb-3 field-login">
+            <label for="email" class="form-label" >Tên đăng nhập / Email</label>
+            <input type="text" class="form-control" th:field="*{email}"  placeholder="Tên đăng nhập / Email" name="login" id="email">
+        </div>
+        <div class="mb-3 field-login">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" th:field="*{password}"   placeholder="Password" name="login" id="password">
+        </div>
+        <div class="row p-3">
+            <button class="btn btn-primary col-12  " type="submit">Login</button>
+        </div>
+
+        <div class="row text-success align-items-center mb-4">
+            <div class="col-7">
+                <a class="text-decoration-none text-success  fz-14" href="">Do not have an account?
+                </a>
+            </div>
+            <div class="col-5 d-flex justify-content-end align-items-center">
+                <a class="text-decoration-none text-success fz-14 " href="">Reset Password
+                </a>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

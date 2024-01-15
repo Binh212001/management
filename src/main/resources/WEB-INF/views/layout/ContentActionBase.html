@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="actionbase" class=" row border-bottom px-3 pb-2">
+    <div class="col-3">
+        <a class="btn btn-primary" th:href="@{/employee/create}">New</a>
+        <span>Employee</span>
+        <i class="fa-solid fa-gear"></i>
+    </div>
+    <form class="col-6">
+        <div class="border-search d-flex align-items-center">
+            <input type="text" placeholder="Search Employee" class="border-0 form-control focus-none">
+            <button class="btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+    </form>
+    <div class="col-3  d-flex justify-content-end align-items-center ">
+        <span class="btn ">
+            1/90
+        </span> <span class="btn  border bg-main  " style="border-radius:0">
+            <i class="fa-solid fa-chevron-left"></i>
+        </span>
+        <span class="btn border bg-main "  style="border-radius:0">
+            <i class="fa-solid fa-chevron-right"></i>
+        </span>
+
+    </div>
+
+</div>
+</body>
+</html>

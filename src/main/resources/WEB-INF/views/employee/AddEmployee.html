@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout/Layout.html}"
+>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<section layout:fragment="content_main" class=" content-height">
+    <div class="bg-main p-5">
+        <div class="bg-white border " style=" border-radius: 5px">
+            <form th:action="@{/employee/create/save}"class="row p-2" method="post" th:object="${employee}">
+                <div class="col-12 mb-2">
+                        <button class="btn btn-success bold" type="submit"> Save  </button>
+                </div>
+                <div class="col-6">
+                    <input th:field="*{fullName}" type="text" class="form-control mb-1" placeholder="Employee Name">
+                    <input th:field="*{email}" type="text" class="form-control mb-1" placeholder="Work Email">
+                    <input th:field="*{password}" type="text" class="form-control mb-1" placeholder="Password">
+                    <input th:field="*{phone}" type="text" class="form-control mb-1" placeholder="Work Phone">
+                </div>
+                <div class="col-6 " style="text-align: right">
+                    <img th:src="@{/image/add-image.png}" alt="Loi" style="width: 70px ">
+                </div>
+                <div class="col-6 d-flex gap-3 align-items-center ">
+                    <span>
+                        Gender:
+                    </span>
+                    <select class="form-control">
+                        <option value=""></option>
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </div>
+                <div class="col-6 d-flex gap-3 align-items-center ">
+                     <span>
+                        Address:
+                    </span>
+                    <input th:field="*{address}" type="text" class="form-control mb-1" placeholder="Address">
+                </div>
+
+                <div class="col-6 d-flex gap-3 align-items-center ">
+                    <span>
+                        Date Of birth:
+                    </span>
+                    <input th:field="*{dateOfBirth}" type="date" class="form-control mb-1" placeholder="Date Of birth">
+                </div>
+                <div class="col-6 d-flex gap-3 align-items-center ">
+                    <span>
+                        Job position:
+                    </span>
+                    <select id="roles"  class="form-control"  name="roles" th:field="*{roles}">
+                        <option value="">Select a department</option>
+                        <option th:each="role : ${roles}" th:value="${role}" th:text="${role}"></option>
+                    </select>
+                </div>
+                <div class="col-6 d-flex gap-3 align-items-center ">
+                    <span>
+                      Manager:
+                    </span>
+                    <select class="form-control" th:field="*{manager}">
+                        <option value=""></option>
+                        <option value="0">Admin</option>
+                        <option value="1">Manager</option>
+                        <option value="2">Employee</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

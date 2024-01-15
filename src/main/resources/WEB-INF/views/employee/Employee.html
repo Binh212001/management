@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{/layout/Layout.html}">
+<head>
+    <title>Layout Dialect Example</title>
+</head>
+<body>
+
+<section layout:fragment="content_main" class=" content-height">
+    <div th:replace="layout/ContentActionBase.html :: actionbase">
+    </div>
+    <div class="row">
+        <div th:replace="layout/Sidebar.html :: sidebar" class="col-2">
+        </div>
+        <div class="bg-main border col-10 p-0 content-main-detail "  >
+
+            <table class="table border table-striped  " >
+
+
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>Employee</th>
+                    <th>Work phone</th>
+                    <th>Work email</th>
+                    <th>Address</th>
+                    <th>Date of birth</th>
+                    <th>Gender</th>
+                    <th>Department</th>
+                    <th>Role</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdodddasdadasasddsadasdsadjkf</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                </tr>
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

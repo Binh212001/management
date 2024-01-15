@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{/layout/Layout.html}">
+<head>
+    <title>Layout Dialect Example</title>
+</head>
+<body>
+
+<section layout:fragment="content_main" style="display: flex ; flex-direction: column ; height: 80vh " >
+    <div style="width: 80% ; margin: auto" class="row ">
+        <div class="col-3 text-center">
+            <a th:href="@{/employee}" class="text-decoration-none text-dark" >
+                <img th:src="@{/image/employee.png}"  style="height: 80px" class="img-thumbnail"/>
+                <br>
+                Employee
+            </a>
+        </div>
+
+        <div class="col-3 text-center">
+            <a th:href="@{/time-off}" class="text-decoration-none text-dark">
+                <img th:src="@{/image/time-off.png}"  style="height: 80px" class="img-thumbnail"/>
+                <br>
+                Time off
+            </a>
+        </div>
+
+        <div class="col-3 text-center">
+            <a th:href="@{/calendar}" class="text-decoration-none text-dark">
+                <img th:src="@{/image/calendar.png}"  style="height: 80px" class="img-thumbnail"/>
+                <br>
+                Calender
+            </a>
+        </div>
+        <div class="col-3 text-center">
+            <a th:href="@{/working-shift}" class="text-decoration-none text-dark">
+                <img th:src="@{/image/working-shift.png}" style="height: 80px" class="img-thumbnail"/>
+                <br>
+              Working Shift
+            </a>
+        </div>
+        d
+        <div class="col-12" style="height: 20px"></div>
+
+        <div class="col-3 text-center">
+            <a th:href="@{/overtime}" class="text-decoration-none text-dark">
+                <img th:src="@{/image/overtime.png}" style="height: 80px" class="img-thumbnail"/>
+                <br>
+                Overtime
+            </a>
+        </div>  <div class="col-3 text-center">
+            <a th:href="@{/setting}" class="text-decoration-none text-dark">
+                <img th:src="@{/image/settings.png}" style="height: 80px" class="img-thumbnail"/>
+                <br>
+                Setting
+            </a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
